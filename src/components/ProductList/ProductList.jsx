@@ -2,17 +2,20 @@ import React, {useState} from 'react';
 import './ProductList.css';
 import ProductItem from "../ProductItem/ProductItem";
 import {useTelegram} from "../../hooks/useTelegram";
+import ulunPng from '../../assets/ulun.webp'
+import puerPng from '../../assets/puer.webp'
+
 import {useCallback, useEffect} from "react";
 
 const products = [
-    {id: '1', title: 'Джинсы', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '2', title: 'Куртка', price: 12000, description: 'Зеленого цвета, теплая'},
-    {id: '3', title: 'Джинсы 2', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '4', title: 'Куртка 8', price: 122, description: 'Зеленого цвета, теплая'},
-    {id: '5', title: 'Джинсы 3', price: 5000, description: 'Синего цвета, прямые'},
-    {id: '6', title: 'Куртка 7', price: 600, description: 'Зеленого цвета, теплая'},
-    {id: '7', title: 'Джинсы 4', price: 5500, description: 'Синего цвета, прямые'},
-    {id: '8', title: 'Куртка 5', price: 12000, description: 'Зеленого цвета, теплая'},
+    {id: '1', title: 'Пуер200', price: 500, description: 'твердий як член Сі Цзіньпіня', img: puerPng},
+    {id: '2', title: 'Улун400', price: 1200, description: "м'який як дупка панди", img:ulunPng},
+    {id: '3', title: 'Пуер300', price: 500, description: 'твердий як член Сі Цзіньпіня', img:puerPng},
+    {id: '4', title: 'Улун500', price: 122, description: "м'який як дупка панди", img:ulunPng},
+    {id: '5', title: 'Пуер400', price: 500, description: 'твердий як член Сі Цзіньпіня', img:puerPng},
+    {id: '6', title: 'Улун600', price: 600, description: "м'який як дупка панди", img:ulunPng},
+    {id: '7', title: 'Пуер500', price: 550, description: 'твердий як член Сі Цзіньпіня', img:puerPng},
+    {id: '8', title: 'Улун700', price: 1200, description: "м'який як дупка панди", img:ulunPng},
 ]
 
 const getTotalPrice = (items = []) => {
